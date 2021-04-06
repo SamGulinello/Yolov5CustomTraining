@@ -1,0 +1,82 @@
+Helmet
+Drink
+Door
+Seat belt
+Toy
+Toaster
+Blender
+Oven
+Sink
+Shower
+Toilet
+Scissors
+Calculator
+Box
+Stapler
+Whiteboard
+Eraser
+Pen
+Paper towel
+Spatula
+Whisk
+Knife
+Measuring cup
+Spoon
+Fork
+Mug
+Bowl
+Plate
+Frying pan
+Book
+Chair
+Desk
+Bookcase
+Coffee table
+Stool
+Shelf
+Candle
+Lamp
+Towel
+Toilet paper
+Football
+Tin can
+Bottle
+Barrel
+Hammer
+Scale
+Tripod
+Camera
+Laptop
+Computer keyboard
+Printer
+Computer mouse
+Computer monitor
+Television
+Mobile phone
+Man
+Woman
+Hot dog
+French fries
+Waffle
+Burrito
+Cookie
+Muffin
+Ice cream
+Apple
+Grape
+Egg
+Cucumber
+Pizza
+Milk
+Sushi
+Wheelchair
+Taxi
+Shorts
+Dress
+Shirt
+Coat
+Suit
+Hat
+Skirt
+Jeans
+Toothbrush
