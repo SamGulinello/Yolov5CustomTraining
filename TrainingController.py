@@ -83,20 +83,25 @@ def formatFileStruct(items):
         if not os.path.isdir(folderPath):
             os.makedirs(folderPath)
         
+        count = 0
         for t in items:
             imagePath = './OID/Dataset/{}/{}/'.format(i,t)
             fileNames = os.listdir(imagePath)
             fileNames = fileNames[:-1]
             
             for fileName in fileNames:
-                shutil.move(os.path.join(imagePath, fileName), folderPath)
+                try:
+                    shutil.move(os.path.join(imagePath, fileName), folderPath)
+                    count += 1
+                except:
+                    print("File {} already exists".format(os.path.join(imagePath, fileName)))
 
     print('Done Formatting')
 
 def main():
     # Download Images using OIDv4
     itemsList = getItems("testItems.txt")
-    commandString = "python3 OIDv4_ToolKit/main.py downloader -y --classes {}--type_csv all --limit 100".format(listToString(itemsList))
+    commandString = "python OIDv4_ToolKit/main.py downloader -y --classes {}--type_csv all --limit 100".format(listToString(itemsList))
     os.system(commandString)
     formatFileStruct(itemsList)
 
@@ -107,7 +112,7 @@ def main():
         documents = yaml.dump(dictFile, file)
 
     # Execute Trainig using Yolov5
-    commandString = "python3 train.py --data test.yaml --weights yolov5s.pt --cfg yolov5s.yaml --epochs 5 --batch 1 --workers 1"
+    commandString = "python train.py --data test.yaml --weights yolov5s.pt --cfg yolov5s.yaml --epochs 5 --batch 1 --workers 1"
     os.system(commandString)
 
 main()
